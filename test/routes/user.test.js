@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../src/app");
+const app = require("../../src/app");
 
 test("Deve listar todos os usuários", () => {
   return request(app)
@@ -11,7 +11,7 @@ test("Deve listar todos os usuários", () => {
     });
 });
 
-test("Deve inserir o usuário com sucesso", () => {
+test.skip("Deve inserir o usuário com sucesso", () => {
   return request(app)
     .post("/users")
     .send({ name: "Walter Mitty", mail: "walter@mail.com" })
